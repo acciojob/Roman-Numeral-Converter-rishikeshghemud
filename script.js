@@ -11,10 +11,21 @@ function convertToRoman(num) {
 
   //your code here
 
+	let str = '';
+
+	for(const [key, value] of Object.entries(obj)) {
+		while(num >= value) {
+			str += key;
+			num -= value;
+		}
+	}
+
+	return str;
+
 }
 // You can test your code by running the above function and printing it to console by pressing the run button at the top. To run it with input 36, uncomment the following line
 
-// console.log(convertToRoman(36));
+console.log(convertToRoman(36));
 
 
 
